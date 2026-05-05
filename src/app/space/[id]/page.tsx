@@ -6,6 +6,12 @@ import { MapPin, Star, Clock, Shield, Calendar, ChevronLeft, CreditCard, Navigat
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
+export function generateStaticParams() {
+  return MOCK_SPACES.map((space) => ({
+    id: space.id,
+  }));
+}
+
 export default function SpaceDetailPage() {
   const { id } = useParams();
   const router = useRouter();
