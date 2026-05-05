@@ -5,9 +5,7 @@ import { MOCK_SPACES } from "@/lib/mock-data";
 import { CreditCard, ShieldCheck, Lock, ChevronLeft, CreditCard as CardIcon } from "lucide-react";
 import Link from "next/link";
 
-import { Suspense } from "react";
-
-function CheckoutContent() {
+export default function CheckoutPage() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const id = searchParams.get("id");
@@ -45,7 +43,7 @@ function CheckoutContent() {
                 <h3 className="text-xl font-bold mb-1">{space.title}</h3>
                 <p className="text-slate-500 text-sm font-medium">{space.address}</p>
                 <div className="flex items-center gap-2 mt-2">
-                    <span className="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full text-[10px] font-bold uppercase tracking-wider">Duration: {hours} hrs</span>
+                    <span className="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full text-[10px] font-bold uppercase tracking-wider">DuratIon: {hours} hrs</span>
                     <span className="px-3 py-1 bg-blue-50 dark:bg-blue-900/10 rounded-full text-[10px] font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">Confirmed Slot</span>
                 </div>
             </div>
@@ -111,13 +109,5 @@ function CheckoutContent() {
         </div>
       </div>
     </div>
-  );
-}
-
-export default function CheckoutPage() {
-  return (
-    <Suspense fallback={<div className="p-12 text-center text-slate-500">Initializing secure checkout...</div>}>
-      <CheckoutContent />
-    </Suspense>
   );
 }
