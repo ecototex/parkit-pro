@@ -32,7 +32,7 @@ export default function OwnerDashboard() {
             { label: "Avg Occupancy", value: "94%", trend: "-2.1%", icon: Edit3, color: "text-amber-600", bg: "bg-amber-500/5" },
             { label: "Active Assets", value: "3", trend: "Stable", icon: Plus, color: "text-purple-600", bg: "bg-purple-500/5" }
         ].map((stat, i) => (
-            <div key={i} className="glass p-8 rounded-[40px] border border-slate-100 dark:border-slate-800 shadow-xl space-y-6 relative overflow-hidden group">
+            <div key={i} className="glass bg-slate-50 dark:bg-slate-950 p-6 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-lg space-y-4 relative overflow-hidden group">
                 <div className={`absolute top-0 right-0 w-32 h-32 ${stat.bg} rounded-full -mr-16 -mt-16 blur-3xl group-hover:scale-110 transition-transform`} />
                 <div className="flex justify-between items-start">
                     <div className="w-12 h-12 bg-white dark:bg-slate-800 rounded-2xl flex items-center justify-center shadow-inner">
@@ -54,7 +54,7 @@ export default function OwnerDashboard() {
         <h3 className="text-2xl font-black tracking-tight">Active Infrastructure</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {MOCK_SPACES.slice(0, 3).map((space) => (
-                <div key={space.id} className="parking-card glass rounded-[45px] overflow-hidden border border-slate-100 dark:border-slate-800 shadow-2xl bg-white dark:bg-slate-900 group">
+                <div key={space.id} className="glass bg-slate-50 dark:bg-slate-950 rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-xl">
                     <div className="h-60 relative overflow-hidden">
                         <div className="absolute top-6 left-6 z-10 px-4 py-2 bg-black/60 backdrop-blur-md rounded-full text-white text-[10px] font-black uppercase tracking-widest border border-white/20">
                             PK-0{space.id}

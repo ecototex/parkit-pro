@@ -141,7 +141,7 @@ export const CityIntelligence = () => {
                 { label: "Current Occupancy", value: "682", sub: "81.4% Fill Rate", icon: Target, color: "text-slate-900 dark:text-white" },
                 { label: "Bookings Today", value: "1,242", sub: "+12% vs Avg", icon: ClipboardList, color: "text-blue-700 dark:text-blue-400" },
             ].map((stat, i) => (
-                <div key={i} className="bg-white dark:bg-slate-900 p-8 border border-slate-200 dark:border-slate-800 rounded-2xl space-y-4 shadow-sm">
+                <div key={i} className="bg-slate-50 dark:bg-slate-950 p-8 border border-slate-200 dark:border-slate-800 rounded-2xl space-y-4 shadow-sm">
                     <div className="flex items-center justify-between">
                         <stat.icon className={`${stat.color} w-5 h-5 opacity-60`} />
                         <span className="text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-widest">{stat.label}</span>
@@ -157,7 +157,7 @@ export const CityIntelligence = () => {
         {/* 2. Utilization & Demand Analysis */}
         <div className="grid md:grid-cols-3 gap-8">
             {/* Supply vs Demand Line Chart */}
-            <div className="md:col-span-2 bg-white dark:bg-slate-900 p-10 border border-slate-200 dark:border-slate-800 rounded-3xl space-y-10">
+            <div className="md:col-span-2 bg-slate-50 dark:bg-slate-950 p-10 border border-slate-200 dark:border-slate-800 rounded-3xl space-y-10">
                 <div className="flex items-center justify-between">
                     <div className="space-y-1">
                         <h4 className="text-xl font-black tracking-tight">System Utilization Profile</h4>
@@ -219,7 +219,7 @@ export const CityIntelligence = () => {
         {/* 3. Geographic & Data explorer */}
         <div className="grid md:grid-cols-3 gap-8">
              {/* Pie Chart Distribution */}
-             <div className="bg-white dark:bg-slate-900 p-10 border border-slate-200 dark:border-slate-800 rounded-3xl space-y-8">
+             <div className="bg-slate-50 dark:bg-slate-950 p-10 border border-slate-200 dark:border-slate-800 rounded-3xl space-y-8">
                 <h4 className="text-lg font-black tracking-tight text-center">Infrastructural Distribution</h4>
                 <div className="h-[200px] w-full">
                     <ResponsiveContainer width="100%" height="100%">
@@ -252,7 +252,7 @@ export const CityIntelligence = () => {
             </div>
 
             {/* Data Explorer Table */}
-            <div className="md:col-span-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden shadow-sm">
+            <div className="md:col-span-2 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden shadow-sm">
                 <div className="p-8 border-b border-slate-100 dark:border-slate-800 flex justify-between items-center bg-slate-50/50 dark:bg-slate-800/20">
                     <div className="flex items-center gap-4">
                         <Search className="w-4 h-4 text-slate-400" />

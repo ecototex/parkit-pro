@@ -60,7 +60,7 @@ export default function SpaceDetailPage() {
                 <motion.div 
                     initial={{ scale: 0.9, y: 20 }}
                     animate={{ scale: 1, y: 0 }}
-                    className="relative glass bg-white dark:bg-slate-900 p-12 rounded-[50px] max-w-md w-full text-center space-y-10 border-none shadow-2xl"
+                    className="relative glass bg-slate-50 dark:bg-slate-950 p-12 rounded-[50px] max-w-md w-full text-center space-y-10 border border-slate-200 dark:border-slate-800 shadow-2xl"
                 >
                     <div className="w-24 h-24 bg-emerald-500 rounded-[35px] flex items-center justify-center mx-auto shadow-2xl shadow-emerald-500/20">
                         <CheckCircle2 className="text-white w-12 h-12" />
@@ -135,7 +135,7 @@ export default function SpaceDetailPage() {
 
       {/* Booking Form Card */}
       <div className="w-full md:w-[420px]">
-        <div className="glass sticky top-28 p-10 rounded-[50px] space-y-8 shadow-2xl border-none animate-in zoom-in-95 duration-700">
+        <div className="glass bg-slate-50 dark:bg-slate-950 sticky top-28 p-10 rounded-[50px] space-y-8 shadow-2xl border border-slate-200 dark:border-slate-800 animate-in zoom-in-95 duration-700">
           <div className="flex justify-between items-center bg-slate-50 dark:bg-slate-800/50 p-6 rounded-3xl">
             <span className="text-slate-500 font-black uppercase text-[10px] tracking-widest">Rate</span>
             <div className="flex items-baseline gap-1">

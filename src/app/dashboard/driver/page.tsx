@@ -22,7 +22,7 @@ export default function DriverDashboard() {
 
       {/* Analytics Summary */}
       <div className="grid md:grid-cols-4 gap-6">
-        <div className="glass p-6 rounded-3xl border border-white dark:border-slate-800 shadow-lg space-y-4">
+        <div className="glass bg-slate-50 dark:bg-slate-950 p-6 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-lg space-y-4">
             <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center">
                 <ShieldCheck className="text-blue-600 w-5 h-5" />
             </div>
@@ -31,7 +31,7 @@ export default function DriverDashboard() {
                 <p className="text-3xl font-black">24</p>
             </div>
         </div>
-        <div className="glass p-6 rounded-3xl border border-white dark:border-slate-800 shadow-lg space-y-4">
+        <div className="glass bg-slate-50 dark:bg-slate-950 p-6 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-lg space-y-4">
             <div className="w-10 h-10 bg-amber-100 dark:bg-amber-900/30 rounded-xl flex items-center justify-center">
                 <Clock className="text-amber-600 w-5 h-5" />
             </div>
@@ -40,7 +40,7 @@ export default function DriverDashboard() {
                 <p className="text-3xl font-black">1</p>
             </div>
         </div>
-        <div className="glass p-6 rounded-3xl border border-white dark:border-slate-800 shadow-lg space-y-4">
+        <div className="glass bg-slate-50 dark:bg-slate-950 p-6 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-lg space-y-4">
             <div className="w-10 h-10 bg-emerald-100 dark:bg-emerald-900/30 rounded-xl flex items-center justify-center">
                 <MapPin className="text-emerald-600 w-5 h-5" />
             </div>
@@ -49,7 +49,7 @@ export default function DriverDashboard() {
                 <p className="text-3xl font-black">120</p>
             </div>
         </div>
-        <div className="glass p-6 rounded-3xl border border-white dark:border-slate-800 shadow-lg space-y-4">
+        <div className="glass bg-slate-50 dark:bg-slate-950 p-6 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-lg space-y-4">
              <div className="w-10 h-10 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center">
                 <History className="text-purple-600 w-5 h-5" />
             </div>
@@ -96,7 +96,7 @@ export default function DriverDashboard() {
         {/* History Table */}
         <div className="md:col-span-2 space-y-6">
             <h3 className="text-xl font-bold flex items-center gap-2">Recent History</h3>
-            <div className="glass rounded-3xl overflow-hidden border border-white dark:border-slate-800 shadow-xl">
+            <div className="glass bg-slate-50 dark:bg-slate-950 rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-xl">
                 <table className="w-full text-left">
                     <thead className="bg-slate-50 dark:bg-slate-900/50 border-b border-slate-100 dark:border-slate-800">
                         <tr>
