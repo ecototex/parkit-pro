@@ -42,6 +42,7 @@ export const Navbar = () => {
           <button 
             onClick={() => setShowRoleModal(true)}
             className="w-9 h-9 bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-950 rounded-full flex items-center justify-center hover:bg-primary transition-all active:scale-95 shadow-lg"
+            suppressHydrationWarning
           >
             <User className="w-4 h-4" />
           </button>
@@ -105,6 +106,7 @@ export const Navbar = () => {
               <button 
                 onClick={() => setShowRoleModal(false)}
                 className="w-full text-center text-[10px] font-black uppercase text-slate-400 tracking-widest pt-2 hover:text-slate-600 transition-colors"
+                suppressHydrationWarning
               >
                 Close Panel
               </button>

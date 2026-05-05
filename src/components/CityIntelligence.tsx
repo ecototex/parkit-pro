@@ -126,6 +126,7 @@ export const CityIntelligence = () => {
             <button 
                 onClick={generateOfficialReport}
                 className="flex items-center gap-3 px-8 py-5 bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-950 rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-slate-700 dark:hover:bg-slate-300 transition-all active:scale-95 shadow-2xl"
+                suppressHydrationWarning
             >
                 <Download className="w-5 h-5" />
                 Generate Official PDF Report
@@ -135,19 +136,19 @@ export const CityIntelligence = () => {
         {/* 1. Key Metrics Summary */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-                { label: "Total Capacity", value: "842", sub: "Slots Verified", icon: MapPin, color: "text-slate-900" },
-                { label: "Active Nodes", value: "812", sub: "Online (96%)", icon: Activity, color: "text-emerald-700" },
-                { label: "Current Occupancy", value: "682", sub: "81.4% Fill Rate", icon: Target, color: "text-slate-900" },
-                { label: "Bookings Today", value: "1,242", sub: "+12% vs Avg", icon: ClipboardList, color: "text-blue-700" },
+                { label: "Total Capacity", value: "842", sub: "Slots Verified", icon: MapPin, color: "text-slate-900 dark:text-white" },
+                { label: "Active Nodes", value: "812", sub: "Online (96%)", icon: Activity, color: "text-emerald-700 dark:text-emerald-400" },
+                { label: "Current Occupancy", value: "682", sub: "81.4% Fill Rate", icon: Target, color: "text-slate-900 dark:text-white" },
+                { label: "Bookings Today", value: "1,242", sub: "+12% vs Avg", icon: ClipboardList, color: "text-blue-700 dark:text-blue-400" },
             ].map((stat, i) => (
                 <div key={i} className="bg-white dark:bg-slate-900 p-8 border border-slate-200 dark:border-slate-800 rounded-2xl space-y-4 shadow-sm">
                     <div className="flex items-center justify-between">
                         <stat.icon className={`${stat.color} w-5 h-5 opacity-60`} />
-                        <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{stat.label}</span>
+                        <span className="text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-widest">{stat.label}</span>
                     </div>
                     <div>
                         <p className={`text-4xl font-black ${stat.color}`}>{stat.value}</p>
-                        <p className="text-[11px] font-bold text-slate-400 mt-1">{stat.sub}</p>
+                        <p className="text-[11px] font-bold text-slate-500 dark:text-slate-400 mt-1">{stat.sub}</p>
                     </div>
                 </div>
             ))}
@@ -260,9 +261,13 @@ export const CityIntelligence = () => {
                             className="bg-transparent border-none outline-none font-bold text-sm"
                             value={filter}
                             onChange={(e) => setFilter(e.target.value)}
+                            suppressHydrationWarning
                         />
                     </div>
-                    <button className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-[10px] font-black uppercase tracking-widest shadow-sm">
+                    <button 
+                        className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-[10px] font-black uppercase tracking-widest shadow-sm"
+                        suppressHydrationWarning
+                    >
                         <Filter className="w-3 h-3" />
                         Filter
                     </button>

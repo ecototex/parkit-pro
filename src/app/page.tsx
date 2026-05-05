@@ -12,7 +12,7 @@ export default function LandingPage() {
       <CityIntelligence />
 
       {/* Multi-Facet Performance Features */}
-      <section className="py-32 bg-slate-50 dark:bg-slate-930 px-6 relative overflow-hidden backdrop-blur-3xl border-t border-slate-200 dark:border-slate-800">
+      <section className="py-32 bg-slate-50 dark:bg-slate-950 px-6 relative overflow-hidden backdrop-blur-3xl border-t border-slate-200 dark:border-slate-800">
         {/* Immersive BG Effects */}
         <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] -translate-y-1/2 pointer-events-none" />
         <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-emerald-500/5 rounded-full blur-[120px] translate-y-1/2 pointer-events-none" />
@@ -20,7 +20,7 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto flex flex-col gap-12">
             <div className="grid md:grid-cols-12 gap-12 items-center">
                 <div className="md:col-span-7 group">
-                    <div className="glass p-12 rounded-[60px] bg-white dark:bg-slate-900 border-none shadow-2xl space-y-8 relative overflow-hidden transition-all duration-700 hover:shadow-primary/10">
+                    <div className="glass p-12 rounded-[60px] bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 shadow-2xl space-y-8 relative overflow-hidden transition-all duration-700 hover:shadow-primary/10">
                         <div className="absolute top-0 right-0 p-8">
                             <div className="w-16 h-16 bg-primary/10 rounded-[25px] flex items-center justify-center border border-primary/20">
                                 <Activity className="text-primary w-8 h-8 group-hover:rotate-12 transition-transform" />
@@ -50,11 +50,11 @@ export default function LandingPage() {
                 </div>
 
                 <div className="md:col-span-5 h-full">
-                    <div className="h-full glass p-12 rounded-[60px] bg-slate-900 dark:bg-slate-950 border-none shadow-2xl text-white space-y-10 relative overflow-hidden group">
+                    <div className="h-full glass p-12 rounded-[60px] bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 shadow-2xl text-slate-900 dark:text-white space-y-10 relative overflow-hidden group">
                         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                         <div className="relative z-10 space-y-8">
-                            <div className="w-16 h-16 bg-white/10 rounded-[25px] flex items-center justify-center backdrop-blur-md border border-white/10">
-                                <TrendingUp className="text-white w-8 h-8" />
+                            <div className="w-16 h-16 bg-slate-900/10 dark:bg-white/10 rounded-[25px] flex items-center justify-center backdrop-blur-md border border-slate-900/10 dark:border-white/10">
+                                <TrendingUp className="text-slate-900 dark:text-white w-8 h-8" />
                             </div>
                             <div className="space-y-4">
                                 <h3 className="text-4xl font-black tracking-tighter leading-[0.95]">List & Earn. <br/> Modern Monetization.</h3>

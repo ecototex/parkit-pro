@@ -64,6 +64,7 @@ export default function NewListingPage() {
                             value={address}
                             onChange={(e) => setAddress(e.target.value)}
                             className="w-full pl-12 pr-12 py-5 bg-slate-50 dark:bg-slate-800 border-none rounded-2xl font-bold focus:ring-4 focus:ring-primary/10 transition-all"
+                            suppressHydrationWarning
                         />
                         <button 
                             type="button"
@@ -85,6 +86,7 @@ export default function NewListingPage() {
                                 type="number" 
                                 placeholder="e.g. 5" 
                                 className="w-full pl-12 py-5 bg-slate-50 dark:bg-slate-800 border-none rounded-2xl font-bold focus:ring-4 focus:ring-primary/10 transition-all"
+                                suppressHydrationWarning
                             />
                         </div>
                     </div>
@@ -97,6 +99,7 @@ export default function NewListingPage() {
                                 type="number" 
                                 placeholder="₹30" 
                                 className="w-full pl-12 py-5 bg-slate-50 dark:bg-slate-800 border-none rounded-2xl font-bold focus:ring-4 focus:ring-primary/10 transition-all"
+                                suppressHydrationWarning
                             />
                         </div>
                     </div>
@@ -106,7 +109,10 @@ export default function NewListingPage() {
                     <label className="text-xs font-black uppercase tracking-widest text-slate-500">Availability</label>
                     <div className="relative group">
                         <Clock className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 w-5 h-5" />
-                        <select className="w-full pl-12 py-5 bg-slate-50 dark:bg-slate-800 border-none rounded-2xl font-bold focus:ring-4 focus:ring-primary/10 transition-all appearance-none cursor-pointer">
+                        <select 
+                            className="w-full pl-12 py-5 bg-slate-50 dark:bg-slate-800 border-none rounded-2xl font-bold focus:ring-4 focus:ring-primary/10 transition-all appearance-none cursor-pointer"
+                            suppressHydrationWarning
+                        >
                             <option>Always Open (24/7)</option>
                             <option>Weekdays (8 AM - 8 PM)</option>
                             <option>Night Only (8 PM - 8 AM)</option>
@@ -118,6 +124,7 @@ export default function NewListingPage() {
                 <button 
                     disabled={isSubmitting}
                     className="w-full py-6 bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-950 rounded-3xl font-black text-sm uppercase tracking-widest hover:bg-primary hover:text-white transition-all shadow-2xl active:scale-95 disabled:opacity-50 flex items-center justify-center gap-3"
+                    suppressHydrationWarning
                 >
                     {isSubmitting ? (
                         <div className="w-6 h-6 border-4 border-slate-400 border-t-white rounded-full animate-spin" />

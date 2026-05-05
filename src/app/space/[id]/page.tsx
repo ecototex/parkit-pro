@@ -150,6 +150,7 @@ export default function SpaceDetailPage() {
                         value={startTime}
                         onChange={(e) => setStartTime(e.target.value)}
                         className="bg-transparent font-black text-lg outline-none w-full"
+                        suppressHydrationWarning
                       />
                   </div>
                   <div className="bg-slate-50 dark:bg-slate-800/50 p-4 rounded-2xl space-y-1">
@@ -158,6 +159,7 @@ export default function SpaceDetailPage() {
                         value={duration}
                         onChange={(e) => setDuration(parseInt(e.target.value))}
                         className="bg-transparent font-black text-lg outline-none w-full cursor-pointer"
+                        suppressHydrationWarning
                       >
                           {[1,2,3,4,5,6,12,24].map(h => <option key={h} value={h}>{h} h</option>)}
                       </select>
@@ -184,6 +186,7 @@ export default function SpaceDetailPage() {
             disabled={isBooking}
             onClick={handleSimulatedPay}
             className="w-full py-6 bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-950 rounded-3xl text-[12px] font-black uppercase tracking-[0.2em] hover:bg-primary hover:text-white hover:shadow-2xl active:scale-95 transition-all flex items-center justify-center gap-3 shadow-2xl"
+            suppressHydrationWarning
           >
             {isBooking ? (
                 <div className="w-6 h-6 border-4 border-slate-300 border-t-slate-950 rounded-full animate-spin" />
