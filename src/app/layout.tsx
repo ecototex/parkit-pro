@@ -10,6 +10,13 @@ export const metadata: Metadata = {
   description: "Book parking spots in Kerala in under 60 seconds. Find, book, and pay securely.",
 };
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
