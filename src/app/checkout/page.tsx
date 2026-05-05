@@ -1,11 +1,11 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { MOCK_SPACES } from "@/lib/mock-data";
 import { CreditCard, ShieldCheck, Lock, ChevronLeft, CreditCard as CardIcon } from "lucide-react";
 import Link from "next/link";
 
-export default function CheckoutPage() {
+function CheckoutContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const id = searchParams.get("id");
@@ -34,7 +34,7 @@ export default function CheckoutPage() {
         </Link>
         <h1 className="text-4xl font-extrabold tracking-tight">Booking Summary</h1>
 
-        <div className="glass p-8 rounded-3xl border border-white dark:border-slate-800 shadow-xl space-y-6">
+        <div className="glass bg-slate-50 dark:bg-slate-950 p-8 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-xl space-y-6">
           <div className="flex gap-4">
             <div className="w-24 h-24 overflow-hidden rounded-2xl flex-shrink-0">
                 <img src={space.image} className="w-full h-full object-cover" />
@@ -71,7 +71,7 @@ export default function CheckoutPage() {
       </div>
 
       <div className="w-full md:w-[350px]">
-        <div className="glass sticky top-24 p-8 rounded-3xl space-y-8 shadow-2xl border border-white dark:border-slate-800 animate-in slide-in-from-right-5 duration-700">
+        <div className="glass bg-slate-50 dark:bg-slate-950 sticky top-24 p-8 rounded-3xl space-y-8 shadow-2xl border border-slate-200 dark:border-slate-800 animate-in slide-in-from-right-5 duration-700">
           <h2 className="text-xl font-bold">Total Payable</h2>
           <div className="space-y-4">
             <div className="flex justify-between items-center py-2 border-b border-slate-100 dark:border-slate-800">
@@ -109,5 +109,13 @@ export default function CheckoutPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function CheckoutPage() {
+  return (
+    <Suspense fallback={<div className="p-12 text-center text-xl font-bold">Loading Checkout...</div>}>
+      <CheckoutContent />
+    </Suspense>
   );
 }
