@@ -106,7 +106,7 @@ export const CityIntelligence = () => {
         doc.text(`Page ${i} of ${pageCount}`, 190, 285);
     }
 
-    doc.save(`PARKIT-CITY-REPORT-${new Date().toISOString().split('T')[0]}.pdf`);
+    doc.save(`WHEREISMYPARKING-CITY-REPORT-${new Date().toISOString().split('T')[0]}.pdf`);
   };
 
   return (

@@ -52,7 +52,7 @@ export default function SearchPage() {
                     </div>
                     <div className="space-y-3">
                         <h2 className="text-3xl font-black tracking-tight">Detect Your Location</h2>
-                        <p className="text-slate-500 font-medium leading-relaxed">Parkit needs your GPS to find the absolute closest available slots in under 60 seconds.</p>
+                        <p className="text-slate-500 font-medium leading-relaxed">Whereismyparking needs your GPS to find the absolute closest available slots in under 60 seconds.</p>
                     </div>
                     <div className="space-y-3 pt-4">
                         <button 

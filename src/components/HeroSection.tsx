@@ -40,7 +40,7 @@ export const HeroSection = () => {
           className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs font-black uppercase tracking-widest text-slate-500"
         >
           <div className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse" />
-          Parkit Marketplace
+          Whereismyparking Marketplace
         </motion.div>
 
         {/* Main Headline */}

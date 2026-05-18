@@ -18,7 +18,7 @@ export default function AdminDashboard() {
       <div className="flex justify-between items-end">
         <div className="space-y-2">
             <h1 className="text-4xl font-extrabold tracking-tight">Admin Console</h1>
-            <p className="text-slate-500 font-medium">Platform overview and system health for Parkit Kerala.</p>
+            <p className="text-slate-500 font-medium">Platform overview and system health for Whereismyparking Kerala.</p>
         </div>
         <button 
           onClick={handleExport}
